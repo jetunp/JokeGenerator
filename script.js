@@ -18,9 +18,9 @@ const jokeGenerator = () => {
 
     xhr.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
-        jokeElement.innerHTML = JSON.parse(this.responseText).value;
+            jokeElement.innerHTML = JSON.parse(this.responseText).value;
         } else {
-
+            jokeElement.innerHTML = 'Not so funny! Check if something is wrong!';
         }
     };
 
